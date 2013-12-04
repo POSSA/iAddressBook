@@ -1,0 +1,38 @@
+
+                             PHP iAddressbook
+
+---
+http://iaddressbook.org/
+
+==== Installation ====
+
+Installing the address book consists of four steps:
+
+  - Copy all files to your web space
+  - Open your web browser and point it to your installation.
+    You will be automatically redirected to the first time installation
+  - Follow the steps in the installer
+  - If you want authorization support enable it during the installation.
+    You need to manually create users in conf/auth.php for now. You will
+    find instructions in conf/auth.php.
+
+
+==== Upgrade ====
+
+The easiest way to upgrade is to use the vCard export feature to get all your contacts
+and then import these contacts into a new installation. You won't lose any data as the
+vCard export preserves all fields!
+
+Follow these steps and you should be on the safe side:
+
+  - Export all your contacts using the vCard export.
+  - Install the addressbook as described in the installation chapter.
+  - Import your vCard into the new addressbook. Use the "folder import" feature if you
+    have a lot of contacts.
+  - If everything works as expected, remove the old installation and rename/move your
+    new installation to the old place.
+
+The changelog can be found at: http://iaddressbook.org/changelog
+
+February 20th, 2012
+
