@@ -4,7 +4,7 @@
 Click to Dial integration for iAddressBook
 To bridge an call between internal extension 100 and external
 number 555-1212, 
-http://<ip_address>/<path>/dial.php?IN=100&OUT=5551212
+http://<ip_address>/<path>/bridge.php?IN=100&OUT=5551212
 
 
 License: GNU GPL/2
@@ -43,7 +43,7 @@ if ($ajam) {
 	}
 	else {
 		$dial = array();
-		$dial['Channel'] = "local/$inbound_channel@from-internal";
+		$dial['Channel'] = $inbound_channel;
 		$dial['Context'] = 'from-internal';
 		$dial['Exten'] = $outbound_number;
 		$dial['Priority'] = '1';

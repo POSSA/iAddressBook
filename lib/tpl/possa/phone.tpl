@@ -7,8 +7,20 @@
     </td>
     <td class="person_right">
         <div class="person_text">
-            
-			<?php echo "<A HREF=\"javascript:void(window.open('./possa/dial.php?IN=103&OUT=" .$phone['phone']. "',%20'Window2',%20config='height=250,width=550'))\" onMouseover=\"window.status='5551212'; return true\" onMouseout=\"window.status=' '; return true\">".  html_numberlayout($phone['phone']) . "</a>"; ?>
+ 
+<style>
+  .hide { position:absolute; top:-1px; left:-1px; width:1px; height:1px; }
+</style>
+
+<iframe name="hiddenFrame" class="hide"></iframe>
+ 
+			<?php
+			
+			echo "<form action='./possa/dial.php' method='get' target='hiddenFrame'>".  html_numberlayout($phone['phone']) . "  <input type='submit' name='dial' value='Dial'  /><input type='hidden' id='IN' name='IN' value='".$_COOKIE['asteridex']['sipID']."'><input type='hidden' id='OUT' name='OUT' value='".$phone['phone']."'></form>"; 
+	?>
+
+
+		
         </div>
     </td>
 </tr>

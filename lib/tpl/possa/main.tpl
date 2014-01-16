@@ -37,10 +37,28 @@
     }
     -->
     </script>
+	<?php
+	if(isset($_POST['ext'])){
+	$INdefault = $_POST['sipID'];
+	setcookie("asteridex[sipID]",$INdefault,time()+99999999);
+  } else {
+  if(isset($_COOKIE['asteridex'])){
+	$INdefault = $_COOKIE['asteridex']['sipID'];
+  } else {
+	//$INdefault = "local/222@from-internal" ;
+	$INdefault = $defaultExt ;
+	setcookie("asteridex[sipID]",$INdefault,time()+99999999);
+  }
+}
+?>
 </head>
 
 <body>
-
+<form id="setExtension" method="POST" action="<?=$_SERVER['PHP_SELF'];?>">
+	<label>Extension:</label>
+	<input type="text" name="sipID" size="20" max_size="20" value="<?=$INdefault;?>">
+	<input type="submit" name="ext" value="save" />
+	</form>
 <?php echo html_msgarea(); ?>
 
 <div class="mainview">
