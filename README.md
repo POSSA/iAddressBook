@@ -29,4 +29,3 @@ Forked from: http://iaddressbook.org/ and modified for integration with a FreePB
 2014-01-16 - Click to dial now working reasonably well
 * In file `lib/tpl/possa/main.tpl` added form and cookie to store the user's extension number & modified footer
 * In file `lib/tpl/possa/phone.tpl` added click to dial button for each phone number.
-* 
