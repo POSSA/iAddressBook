@@ -14,6 +14,12 @@ Forked from: http://iaddressbook.org/ and modified for integration with a FreePB
 * When viewing iAddressBook contact details, enter the local user extension number at the top of the page in the format `local/101@from-internal` or `sip/101`. Click save and reload the page to set and read the cookie.
 * Use the `dial` button next to any displayed phone number to click to dial. First the configured local extension will ring, and when answered the call will bridge to the oubound number.
 
+### Roadmap
+* Add a javascript window to pop up when dial initiates to display local extension, remote number and give the user the ability to cancel the dial or to dismiss the window and allow the call to continue.
+* Possibly display call progress to user in javascript window similar to Noojee click
+* Add ability to connect to asterisk via AMI in addition to AJAM
+* Add code that allows for a completely config free installation on a FreePBX system by loading the freePBX bootstrap and using the $astman class to initiate dialling.
+
 ### History
 2013-12-03 - Forked project from iAddressBook.
 
