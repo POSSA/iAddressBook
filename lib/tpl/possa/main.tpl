@@ -1,16 +1,25 @@
 <?php
 
 /**
- * iAddressBook Default Template
+ * iAddressBook `possa` Template
  *
+ * This template is a modified copy of the default template
+ * included with iAddressBook 2.0. Modifications are for 
+ * integration with an Asterisk/FreePBX system.
+ * 
  * This is the template you need to change for the overall look
- * of AddressBook.
+ * of iAddressBook.
  *
  * You should leave the doctype at the very top - It should
  * always be the very first line of a document.
  *
+ * Original template by:
  * @link   http://iaddressbook.org
  * @author Clemens Wacha (clemens.wacha@gmx.net)
+ *
+ * Template Modifications by:
+ * @link http://www.pbxossa.org
+ * @author lgaetz
  */
 
 ?>
@@ -158,7 +167,8 @@
     <!-- Begin Footer --> 
     <div class="separator">&nbsp;</div>
     <div class="footer">
-        <a href='http://iaddressbook.org/'>PHP iAddressbook <?php echo get_version(); ?></a>
+        Contact Manager: <a href='http://iaddressbook.org/'>PHP iAddressbook <?php echo get_version(); ?></a></br>
+		Asterisk Integration: <a href='http://www.pbxossa.org'>PBX Open Source Software Alliance</a>
     </div>
     <!-- End Footer --> 
 
