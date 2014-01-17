@@ -1,5 +1,5 @@
-iAddressBook
-============
+iAddressBook for Asterisk
+=========================
 
 ### Summary
 Forked from: http://iaddressbook.org/ and modified for integration with a FreePBX/Asterisk PBX. The goal is to make as no changes to the core iAddressBook files, so that iAddressBook can be upgraded in place without affecting the possa changes. All non-iAddressBook code is confined to folders, `/possa/` and `/lib/tpl/possa/`.
