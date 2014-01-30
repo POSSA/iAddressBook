@@ -68,7 +68,7 @@ $conf['bday_advance_week'] = 2;                  // display upcoming birthdays i
 // Advanced Options
 
 $conf['canonical']   = 0;                        // Should all URLs use full canonical http://... style?
-$conf['auth_enabled'] = 1;                       // enable authentication - login and password can be set in conf/auth.php
+$conf['auth_enabled'] = 0;                       // enable authentication - login and password can be set in conf/auth.php
 $conf['auth_allow_guest'] = 1;                   // allow guest access (no login required) - the permissions can be conficured in conf/auth.php
 $conf['im_convert']  = '/usr/bin/convert';       // path to ImageMagicks convert
 $conf['photo_enable'] = 0;                       // enable photo usage (disable, if you are using sqlite 2.x)
