@@ -5,10 +5,23 @@ iAddressBook for Asterisk
 Forked from: http://iaddressbook.org/ and modified for integration with a FreePBX/Asterisk PBX. The goal is to make as no changes to the core iAddressBook files, so that iAddressBook can be upgraded in place without affecting the possa changes. All non-iAddressBook code is confined to folders, `/possa/` and `/lib/tpl/possa/`.
 
 ### Installation
-* Follow installation instructions for iAddressBook ver. 2.x as outlined at http://iaddressbook.org/. Note that before you can run the auto installer, you must first manually create a database. 
-* Once Installed, get the folders `/possa/` and `/lib/tpl/possa` from this repo and copy to the corresponding folders in your install
-* In the main iAddressBook config file `/conf/config.php` edit the template line to read: `$conf['template'] = 'possa';`
-* In the possa asterisk config file `/possa/config.php` edit variables to connect to the Asterisk PBX. AJAM is required to be enabled and properly configured on the Asterisk PBX.
+* Starting with a Centos based LAMP-A distro such as PBX in a Flash, determine the MySQL credentials then at the CLI:
+```
+cd /var/www/html
+git clone https://github.com/lgaetz/iAddressBook.git iaddress
+chown -R asterisk:asterisk iaddress
+mysqladmin -u root -ppassw0rd  create addressbook
+```
+* With a browser navigate to `http://<serverip>/iaddress` and step through the install instructions. Confirm that there are no errors, enter MySQL access credentials for your PBX and click 'create tables' to initialize the database. 
+* Now with the stock iAddressBook project installed and confirmed running, we will overwrite the config.php file with the following to add asterisk integration:
+```
+cd /var/www/html/iaddress/conf
+mv config.php config.php.back
+mv config.php.possa config.php
+```
+* Depending on the distro used, it may be necessary to edit the conf/config.php file with the MySQL access credentials. After this step, reload iAddressBook in the browser and confirm the config changes have not broken anything.
+* In order to get click to dial working from iAddressBook, you need to configure the PBX to accept AJAM connections to the http manager interface and you need manager credentials. Then locate and edit the file: `/var/www/html/iaddress/possa/config.php` with the necessary details to connect to the Asterisk AJAM interface.
+ 
 
 ### Usage
 * When viewing iAddressBook contact details, enter the local user extension number at the top of the page in the format `local/101@from-internal` or `sip/101`. Click save and reload the page to set and read the cookie.
@@ -35,3 +48,5 @@ Forked from: http://iaddressbook.org/ and modified for integration with a FreePB
 2014-01-16 - Click to dial now working reasonably well
 * In file `lib/tpl/possa/main.tpl` added form and cookie to store the user's extension number & modified footer
 * In file `lib/tpl/possa/phone.tpl` added click to dial button for each phone number.
+
+2014-01-30 - Having passed initial testings, project moved to github.com/POSSA
