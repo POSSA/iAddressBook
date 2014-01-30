@@ -21,7 +21,7 @@
  *    "Raw HTTP Manager Event Interface". Note that neither 'localhost' nor 
  *    '127.0.0.1' worked properly during testing.
  */
-$config['urlraw'] = 'http://10.41.2.6:8088/asterisk/rawman';
+$config['urlraw'] = 'http://192.168.0.10:8088/asterisk/rawman';
 
 
 /*
