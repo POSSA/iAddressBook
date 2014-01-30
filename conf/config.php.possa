@@ -16,7 +16,7 @@ $conf['basedir']        = '';                    //relative dir to serveroot - b
 $conf['baseurl']        = '';                    //URL to server including protocol - blank for autodetect
 
 $conf['dbtype']         = 'mysql';               // database type: mysql, postgres, sqlite etc.
-$conf['dbname']         = 'iaddress';         // database name
+$conf['dbname']         = 'addressbook';         // database name
 $conf['dbserver']       = 'localhost';           // server to connect to
 $conf['dbuser']         = 'root';                    // username to connect to server
 $conf['dbpass']         = 'passw0rd';                    // cleartext password to connect to server
