@@ -20,7 +20,12 @@ mv config.php config.php.back
 mv config.php.possa config.php
 ```
 * Depending on the distro used, it may be necessary to edit the conf/config.php file with the MySQL access credentials. After this step, reload iAddressBook in the browser and confirm the config changes have not broken anything.
-* In order to get click to dial working from iAddressBook, you need to configure the PBX to accept AJAM connections to the http manager interface and you need manager credentials. Then locate and edit the file: `/var/www/html/iaddress/possa/config.php` with the necessary details to connect to the Asterisk AJAM interface.
+* In order to get click to dial working from iAddressBook, you need to configure the PBX to accept AJAM connections to the http manager interface and you need manager credentials. Then:
+```
+cd /var/www/html/iaddress/possa
+mv config.php.sample config.php
+```
+* edit the file: `/var/www/html/iaddress/possa/config.php` with the necessary details to connect to the Asterisk AJAM interface.
  
 
 ### Usage
