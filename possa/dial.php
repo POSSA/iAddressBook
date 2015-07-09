@@ -4,7 +4,7 @@
 Click to Dial integration for iAddressBook
 To bridge an call between internal extension 100 and external
 number 555-1212, 
-http://<ip_address>/<path>/bridge.php?IN=100&OUT=5551212
+http://<ip_address>/<path>/dial.php?IN=100&OUT=5551212
 
 
 License: GNU GPL/2
